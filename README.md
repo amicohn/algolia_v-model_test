@@ -7,7 +7,7 @@ solution : use **value/input** rather **v-model**
 
 [Diff&compare](https://github.com/amicohn/algolia_v-model_test/commit/edc62e1b215b12fdcbcdada71596b1b42a7f2b74#diff-38859641a51a06ca238e305bc50af5c4)
 
-### [Q&A](https://discourse.algolia.com/t/v-model-vue-js-and-vuetify/7044)
+### [Q&A page](https://discourse.algolia.com/t/v-model-vue-js-and-vuetify/7044)
 Thank you [samuel](https://discourse.algolia.com/u/samuel.vaillant/summary)!
 
 ## Build Setup
