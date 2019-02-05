@@ -1,6 +1,6 @@
 # algolia_and_vue-nuxt-vuetify
 
-> My flawless Nuxt.js project
+> algolia test
 
 ## Build Setup
 
