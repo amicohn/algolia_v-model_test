@@ -1,4 +1,4 @@
-# algolia_and_vue-nuxt-vuetify
+# algolia_v-model_test
 
 > algolia test
 
