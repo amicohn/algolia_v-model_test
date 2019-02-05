@@ -1,8 +1,6 @@
 <template>
   <ais-instant-search index-name="demo_ecommerce" :search-client="searchClient">
-    
-    <!-- facetQuery ???? -->
-    <ais-configure :hitsPerPage="8" :query="search_query" :facetQuery="brand_query"/>
+    <ais-configure :hitsPerPage="8"/>
 
     <div class="left-panel">
       <h2>Brands</h2>
@@ -21,16 +19,10 @@
     }"
         >
           <v-text-field
-            v-model="brand_query"
             type="search"
             placeholder="I want to set up here with v-model, but, not working"
+            @input="searchForItems($event)"
           />
-
-          <input
-            @input="searchForItems($event.currentTarget.value)"
-            placeholder="Algolia original form.Here is working."
-            style="border: solid medium lime; height:50px; width:350px;"
-          >
 
           <v-list>
             <span v-if="isFromSearch && !items.length" style="color:red">No results.</span>
@@ -55,10 +47,12 @@
     <div class="right-panel">
       <ais-search-box>
         <v-text-field
+          slot-scope="{ currentRefinement, refine }"
           name="name"
           label="Search"
-          v-model="search_query"
           placeholder="Search / Enter Keywords"
+          :value="currentRefinement"
+          @input="refine($event)"
         />
       </ais-search-box>
       <ais-hits>
@@ -89,10 +83,7 @@ export default {
       searchClient: algoliasearch(
         "B1G2GM9NG0",
         "aadef574be1f9252bb48d4ea09b5cfe5"
-      ),
-      search_query: "",
-
-      brand_query: ""
+      )
     };
   }
 };
