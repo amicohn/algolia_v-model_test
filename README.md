@@ -2,6 +2,8 @@
 
 > algolia test
 
+solution : use **value/input** rather **v-model**
+
 ## Build Setup
 
 ``` bash
